@@ -1,6 +1,6 @@
 Feature: flight search oneway
 #Background:
-#  Given user is on fruit search page
+
 
   Scenario: verify the user can search the future flights for oneway
     Given user is on orbitz home page
