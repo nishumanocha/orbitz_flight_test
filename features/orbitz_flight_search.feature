@@ -34,7 +34,7 @@ Feature: flight search oneway
     And user select 7 travelers
     Then user should see the warning message "we are only able to book between 1 and 6 travelers. Please adjust the number of travelers for your search"
 
-    Scenario: verify the user select Non Stop flight search result
+    Scenario: verify the user search for Non Stop flight in search result
       Given user is on orbitz home page
       When user click the flight icon
       And user click the oneway icon
@@ -44,3 +44,8 @@ Feature: flight search oneway
       Then use should see the available flights for the particular dates
       When user select the Non Stop box from left side panel
       Then user should see only Non Stop flight for the particular destination
+
+  Scenario: verify the user search for Non Stop flight in search result using - Declarative style
+    Given user is on orbitz home page
+    When user search for non stop flight in search result
+    Then user should see the available Non Stop flights only
