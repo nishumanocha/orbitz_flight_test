@@ -43,12 +43,12 @@ Feature: flight search oneway
       And user click the search button
       Then use should see the available flights for the particular dates
       When user select the Non Stop box from left side panel
-      Then user should see only Non Stop flight for the particular destination
+      Then user should see the search results only Non Stop flight for the particular destination
 
   Scenario: verify the user search for Non Stop flight in search result using - Declarative style
     Given user is on orbitz home page
     When user search for non stop flight in search result
-    Then user should see the available Non Stop flights only
+    Then user should see the search results for Non Stop flights only
 
     Scenario: verify the user select only Delta Airlines
       Given user is on orbitz home page
@@ -57,6 +57,6 @@ Feature: flight search oneway
       And user type the <city_name> in the leaving from and user select the appropriate airport in the leaving from tab
       And user select the <city_name> in the going to tab and user select the appropriate airport in the going to tab
       And user click the search button
-      Then use should see the available flights for the particular dates
+      Then user should see the available flights for the particular dates
       When user select only "Delta Airlines" from the Airlines options in the left panel
-      Then user should see only "Delta Airlines" result
+      Then user should see the search results only "Delta Airlines" result
